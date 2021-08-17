@@ -4,7 +4,7 @@ export default function Input(props: any) {
   return (
     <div className="container-input">
       <label>{props.label}</label>
-      <input className="input" />
+      <input className="input" type={props.type} />
     </div>
   );
 }

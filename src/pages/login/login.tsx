@@ -19,8 +19,8 @@ export default function Login() {
       <form onSubmit={handleLogin} className="">
         <div>
           <div className="logon-container">
-            <Input label="User" />
-            <Input label="Password" />
+            <Input label="User" type="email" />
+            <Input label="Password" type="password" />
             <SubmitButton text="Login" />
             <a href="/createAccount">Create account</a>
           </div>
