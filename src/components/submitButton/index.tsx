@@ -1,9 +1,9 @@
 import React from "react";
 import "./styles.css";
-export default function SubmitButton() {
+export default function SubmitButton(props: any) {
   return (
     <button className="button" type="submit">
-      Login
+      <label>{props.text}</label>
     </button>
   );
 }

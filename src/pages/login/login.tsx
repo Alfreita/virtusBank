@@ -21,7 +21,7 @@ export default function Login() {
           <div className="logon-container">
             <Input label="User" />
             <Input label="Password" />
-            <SubmitButton />
+            <SubmitButton text="Login" />
             <a href="/createAccount">Create account</a>
           </div>
         </div>
