@@ -4,7 +4,12 @@ export default function Input(props: any) {
   return (
     <div className="container-input">
       <label>{props.label}</label>
-      <input className="input" type={props.type} />
+      <input
+        className="input"
+        value={props.value}
+        onChange={(value) => props.setValue(value)}
+        type={props.type}
+      />
     </div>
   );
 }
