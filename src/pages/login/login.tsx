@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router";
+import Input from "../../components/input";
 import "./styles.css";
 
 export default function Login() {
@@ -18,17 +19,9 @@ export default function Login() {
       <form onSubmit={handleLogin} className="">
         <div>
           <div className="logon-container">
-            <div className="fields-container">
-              <p>User:</p>
-              <input className="input" />
-            </div>
-            <div className="fields-container">
-              <p>Password:</p>
-              <input className="input" />
-            </div>
-            <button className="button" type="submit">
-              Login
-            </button>
+            <Input label="User" />
+            <Input label="Password" />
+
             <a href="/createAccount">Create account</a>
           </div>
         </div>
