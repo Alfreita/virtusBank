@@ -1,15 +1,15 @@
-.container {
+.container-input {
   display: flex;
-  width: 1vw;
+  width: 18vw;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
-p {
+label {
   width: 5vw;
 }
 .input {
-  background-color: aliceblue;
+  background-color: rgb(209, 232, 253);
   display: flex;
   width: 15vw;
   border-width: 0px;
