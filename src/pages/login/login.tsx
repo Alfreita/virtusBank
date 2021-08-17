@@ -9,22 +9,30 @@ export default function Login() {
     history.push("/profile");
   };
   return (
-    <form onSubmit={handleLogin}>
-      <div className="container">
-        <div className="logon-container">
-          <div className="fields-container">
-            <p>User:</p>
-            <input className="input" />
-          </div>
-          <div className="fields-container">
-            <p>Password:</p>
-            <input className="input" />
-          </div>
-          <button className="button" type="submit">
-            Login
-          </button>
-        </div>
+    <div className="container">
+      <div className="brand-container">
+        <p className="brand-name">Virtus</p>
+        <p className="brand-bank">Bank</p>
       </div>
-    </form>
+
+      <form onSubmit={handleLogin} className="">
+        <div>
+          <div className="logon-container">
+            <div className="fields-container">
+              <p>User:</p>
+              <input className="input" />
+            </div>
+            <div className="fields-container">
+              <p>Password:</p>
+              <input className="input" />
+            </div>
+            <button className="button" type="submit">
+              Login
+            </button>
+            <a href="/createAccount">Create account</a>
+          </div>
+        </div>
+      </form>
+    </div>
   );
 }

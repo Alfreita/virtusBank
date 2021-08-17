@@ -1,10 +1,29 @@
 .container {
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
   background-color: aquamarine;
   justify-content: center;
   align-items: center;
+}
+.brand-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 25vw;
+}
+.brand-name {
+  font-size: 50px;
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(236, 129, 129);
+}
+.brand-bank {
+  font-size: 50px;
+  font-family: "Courier New", Courier, monospace;
+}
+form {
+  display: flex;
+  align-self: center;
 }
 .logon-container {
   background-color: aliceblue;
@@ -47,4 +66,8 @@ p {
   background-color: rgb(236, 129, 129);
   border-width: 0px;
   border-radius: 15px;
+}
+
+a {
+  color: black;
 }
