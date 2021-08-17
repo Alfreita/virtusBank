@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  width: 1vw;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+p {
+  width: 5vw;
+}
+.input {
+  background-color: aliceblue;
+  display: flex;
+  width: 15vw;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  outline: 0;
+}
+.input focus {
+  outline: none !important;
+}
