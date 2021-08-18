@@ -7,20 +7,7 @@
   justify-content: center;
   align-items: center;
 }
-.brand-container {
-  display: flex;
-  justify-content: space-evenly;
-  width: 25vw;
-}
-.brand-name {
-  font-size: 50px;
-  font-family: "Courier New", Courier, monospace;
-  color: rgb(236, 129, 129);
-}
-.brand-bank {
-  font-size: 50px;
-  font-family: "Courier New", Courier, monospace;
-}
+
 form {
   display: flex;
   align-self: center;

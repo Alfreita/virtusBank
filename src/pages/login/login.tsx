@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router";
 import Input from "../../components/input";
 import SubmitButton from "../../components/submitButton";
+import Brand from "../../components/brand";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles.css";
@@ -27,10 +28,7 @@ export default function Login() {
   };
   return (
     <div className="container">
-      <div className="brand-container">
-        <p className="brand-name">Virtus</p>
-        <p className="brand-bank">Bank</p>
-      </div>
+      <Brand />
       <form onSubmit={handleLogin} className="">
         <div>
           <div className="logon-container">
