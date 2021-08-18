@@ -44,7 +44,7 @@ export default function Login() {
               value={password}
               setValue={setInputPassword}
             />
-            <SubmitButton text="Login" />
+            <SubmitButton text="Login" type="submit" />
 
             <a href="/createAccount">Create account</a>
           </div>

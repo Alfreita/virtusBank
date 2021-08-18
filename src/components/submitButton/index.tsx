@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 export default function SubmitButton(props: any) {
   return (
-    <button className="button" type="submit">
+    <button className="button" type={props.type} onClick={props.onClick}>
       <label>{props.text}</label>
     </button>
   );
