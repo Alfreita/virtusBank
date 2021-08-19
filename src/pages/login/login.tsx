@@ -12,7 +12,7 @@ export default function Login() {
   const [userEmail, setUserEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
-  const handleLogin = async(e: any) => {
+  const handleLogin = async (e: any) => {
     try {
       e.preventDefault();
       if (!userEmail || !password) throw new Error("Please fill all field");
@@ -46,7 +46,11 @@ export default function Login() {
               value={password}
               setValue={setInputPassword}
             />
-            <SubmitButton text="Login" type="submit" />
+            <SubmitButton
+              text="Login"
+              type="submit"
+              className="submit-button"
+            />
 
             <a href="/createAccount">Create account</a>
           </div>

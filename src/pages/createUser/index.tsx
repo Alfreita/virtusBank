@@ -77,8 +77,18 @@ export default function CreateUser() {
           setValue={handleUserConfirm}
         />
         <div className="button-container">
-          <BackButton text="Back" onClick={handleClick} />
-          <SubmitButton text="Create" onClick={handleCreate} type="button" />
+          <BackButton
+            text="Back"
+            onClick={handleClick}
+            type="button"
+            className="back-button"
+          />
+          <SubmitButton
+            text="Create"
+            onClick={handleCreate}
+            type="submit-button"
+            className="submit-button"
+          />
         </div>
       </div>
       <ToastContainer />
