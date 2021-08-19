@@ -7,6 +7,7 @@ import Brand from "../../components/brand";
 import { useHistory } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import CreateUserData from "../../consumer/createUserData";
 
 export default function CreateUser() {
   const [userName, setUserName] = useState("");
@@ -32,14 +33,15 @@ export default function CreateUser() {
     setConfirmPassword(e.target.value);
   };
 
-  const handleCreate = (e: any) => {
+  const handleCreate = async (e: any) => {
     try {
       e.preventDefault();
       if (!userName || !email || !password || !confirmPassword)
         throw new Error("Please fill all field");
       if (password !== confirmPassword)
         throw new Error("Mismatch password and confirm password");
-      history.push("/profile");
+      const response = await CreateUserData(userName, email, password);
+      history.push("/");
     } catch (error) {
       console.log(error);
       toast(error.message, { type: "error" });

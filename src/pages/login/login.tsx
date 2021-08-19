@@ -6,22 +6,24 @@ import Brand from "../../components/brand";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles.css";
+import LoginUser from "../../consumer/loginUserData";
 
 export default function Login() {
-  const [user, setUser] = useState("");
+  const [userEmail, setUserEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
-  const handleLogin = (e: any) => {
+  const handleLogin = async(e: any) => {
     try {
       e.preventDefault();
-      if (!user || !password) throw new Error("Please fill all field");
+      if (!userEmail || !password) throw new Error("Please fill all field");
       history.push("/profile");
+      await LoginUser(userEmail, password);
     } catch (error) {
       toast(error.message, { type: "error" });
     }
   };
   const setInputUser = (e: any) => {
-    setUser(e.target.value);
+    setUserEmail(e.target.value);
   };
   const setInputPassword = (e: any) => {
     setPassword(e.target.value);
@@ -35,7 +37,7 @@ export default function Login() {
             <Input
               label="User"
               type="email"
-              value={user}
+              value={userEmail}
               setValue={setInputUser}
             />
             <Input
