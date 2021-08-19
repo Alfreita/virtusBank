@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import Input from "../../components/input";
-import SubmitButton from "../../components/submitButton";
-import BackButton from "../../components/backButton";
+import Button from "../../components/Button";
 import Brand from "../../components/brand";
 import { useHistory } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
@@ -77,13 +76,13 @@ export default function CreateUser() {
           setValue={handleUserConfirm}
         />
         <div className="button-container">
-          <BackButton
+          <Button
             text="Back"
             onClick={handleClick}
             type="button"
             className="back-button"
           />
-          <SubmitButton
+          <Button
             text="Create"
             onClick={handleCreate}
             type="submit-button"

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import Input from "../../components/input";
-import SubmitButton from "../../components/submitButton";
+import Button from "../../components/Button";
 import Brand from "../../components/brand";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -46,11 +46,7 @@ export default function Login() {
               value={password}
               setValue={setInputPassword}
             />
-            <SubmitButton
-              text="Login"
-              type="submit"
-              className="submit-button"
-            />
+            <Button text="Login" type="submit" className="submit-button" />
 
             <a href="/createAccount">Create account</a>
           </div>
