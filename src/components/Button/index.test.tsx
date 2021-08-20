@@ -8,6 +8,21 @@ describe("Should test button component", () => {
     const button = screen.getByRole("button");
     expect(button).toBeInTheDocument();
   });
+
+  test("should have type submit", () => {
+    render(<Button type="submit" />);
+    const button = screen.getByRole("button");
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveAttribute("type", "submit");
+  });
+
+  test("should have type button", () => {
+    render(<Button type="button" />);
+    const button = screen.getByRole("button");
+    expect(button).toBeInTheDocument();
+    expect(button).toHaveAttribute("type", "button");
+  });
+
   test("should exist back-button style class", () => {
     render(<Button type="button" className="back-button" />);
     const button = screen.getByRole("button");
