@@ -6,7 +6,7 @@ export default async function CreateUser(
   password: string
 ) {
   try {
-    await axios.post("http://localhost:3333/bankapi/create", {
+    await axios.post("http://localhost:3333/bankapi/signup", {
       userName,
       email,
       password,
