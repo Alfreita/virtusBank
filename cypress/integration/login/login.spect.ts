@@ -7,7 +7,7 @@ describe("should access login page", () => {
     cy.get(".logon-container");
   });
   it("should have user label with User value", () => {
-    cy.get(":nth-child(1) > label").should("have.text", "User");
+    cy.get(":nth-child(1) > label").should("have.text", "Email");
   });
   it("should have Password label with Password value", () => {
     cy.get(":nth-child(2) > label").should("have.text", "Password");
@@ -45,6 +45,6 @@ describe("should access login page", () => {
     const password = "1234";
     cy.get(":nth-child(2) > .input").type(`${password}`);
     cy.get(":nth-child(2) > .input").should("have.value", password);
-    cy.get('.submit-button').click()
+    cy.get(".submit-button").click();
   });
 });

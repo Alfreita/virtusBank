@@ -35,7 +35,7 @@ export default function Login() {
         <div>
           <div className="logon-container">
             <Input
-              label="User"
+              label="Email"
               type="email"
               value={userEmail}
               setValue={setInputUser}
