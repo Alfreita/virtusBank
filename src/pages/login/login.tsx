@@ -16,10 +16,14 @@ export default function Login() {
     try {
       e.preventDefault();
       if (!userEmail || !password) throw new Error("Please fill all field");
-      history.push("/profile");
       await LoginUser(userEmail, password);
+      history.push("/profile");
     } catch (error) {
-      toast(error.message, { type: "error" });
+      if (!error.message.includes("401")) {
+        toast("Try again!!", { type: "warning" });
+      } else {
+        toast("Not authorized", { type: "error" });
+      }
     }
   };
   const setInputUser = (e: any) => {

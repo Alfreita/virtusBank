@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default async function LoginUser(email: string, password: string) {
   try {
-    await axios.post("http://localhost:3333/bankapi/signin", {
+    return await axios.post("http://localhost:3333/bankapi/signin", {
       email,
       password,
     });
