@@ -1,26 +1,15 @@
 import React from "react";
 import Card from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
-import Brand from "../../components/brand";
+import { useHistory } from "react-router";
+import Header from "../../components/header";
 import "./styles.css";
 
 const Profile: React.FC = () => {
+  const history = useHistory();
   return (
     <div className="profile-container">
-      <div className="header">
-        <div className="features">
-          <label>deposit</label>
-          <label>getchash</label>
-          <label>getaccount</label>
-        </div>
-        <div className="brandWidth">
-          <Brand />
-        </div>
-        <div className="profileWidth">
-          <label>Profile</label>
-        </div>
-      </div>
-
+      <Header />
       <div className="card-container">
         <div className="card">
           <Card

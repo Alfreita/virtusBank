@@ -6,32 +6,7 @@
   background-color: rgb(224, 224, 224);
   align-items: center;
 }
-.header {
-  margin-top: 1%;
-  display: flex;
-  width: 90%;
-  background-color: rgb(255, 255, 255);
-  height: 10vh;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 20px;
-   box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.2);
-}
-.brandWidth {
-  display: flex;
-  width: 40vw;
-}
-.features {
-  display: flex;
-  width: 33vw;
-  justify-content: space-evenly;
-}
 
-.profileWidth {
-  display: flex;
-  width: 10vw;
-  justify-content: flex-end;
-}
 .card-container {
   display: flex;
   align-items: center;
