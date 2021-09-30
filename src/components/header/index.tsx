@@ -1,26 +1,19 @@
 import React from "react";
-import { useHistory } from "react-router";
 import Brand from "../brand";
+import HeaderButton from "../headerButton";
 import "./styles.css";
 const Header: React.FC = () => {
-  const history = useHistory();
   return (
     <div className="header">
       <div className="features">
-        <button onClick={() => history.push("/deposit")}>
-          <label>deposit</label>
-        </button>
-        <button onClick={() => history.push("/deposit")}>
-          <label>getchash</label>
-        </button>
+        <HeaderButton title="deposit" toRedirect="/deposit" />
+        <HeaderButton title="getchash" toRedirect="/getcash" />
       </div>
       <div className="brandWidth">
         <Brand />
       </div>
       <div className="profileWidth">
-        <button onClick={() => history.push("/profile")}>
-          <label>Profile</label>
-        </button>
+        <HeaderButton title="Profile" toRedirect="/profile" />
       </div>
     </div>
   );
