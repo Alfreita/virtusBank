@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import "./styles.css";
-import Input from "../../components/input";
-import Button from "../../components/Button";
-import Brand from "../../components/brand";
 import { useHistory } from "react-router";
-import { ToastContainer, toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Brand from "../../components/brand";
+import Button from "../../components/Button";
+import Input from "../../components/input";
 import CreateUserData from "../../consumer/createUserData";
+import "./styles.css";
 
-export default function CreateUser() {
+const CreateUser: React.FC = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -93,4 +93,6 @@ export default function CreateUser() {
       <ToastContainer />
     </div>
   );
-}
+};
+
+export default CreateUser;

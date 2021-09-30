@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
-import Input from "../../components/input";
-import Button from "../../components/Button";
-import Brand from "../../components/brand";
-import { ToastContainer, toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./styles.css";
+import Brand from "../../components/brand";
+import Button from "../../components/Button";
+import Input from "../../components/input";
 import LoginUser from "../../consumer/loginUserData";
+import "./styles.css";
 
-export default function Login() {
+const Login: React.FC = () => {
   const [userEmail, setUserEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
@@ -59,4 +59,5 @@ export default function Login() {
       <ToastContainer />
     </div>
   );
-}
+};
+export default Login;

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import Brand from "../../components/brand";
-import "./styles.css";
+import React from "react";
 import Card from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
+import Brand from "../../components/brand";
+import "./styles.css";
 
-export default function Profile() {
+const Profile: React.FC = () => {
   return (
     <div className="profile-container">
       <div className="header">
@@ -46,4 +46,5 @@ export default function Profile() {
       </div>
     </div>
   );
-}
+};
+export default Profile;
